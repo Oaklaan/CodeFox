@@ -4,3 +4,4 @@ out/
 core/target/
 webview/pkg/
 *.vsix
+.vscodeignore 
