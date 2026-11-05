@@ -1,0 +1,17 @@
+[package]
+name = "fox-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "WebAssembly game logic for the CodeFox VS Code extension"
+repository = "https://github.com/Oaklaan/CodeFox"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+
+[profile.release]
+opt-level = "s"
+lto = true

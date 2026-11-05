@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" role="img" aria-labelledby="title desc">
+  <title id="title">CodeFox mascot in motion</title>
+  <desc id="desc">A stylized fox with a wagging tail and animated legs, as if running.</desc>
+  <defs>
+    <linearGradient id="fur" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8b04d"/>
+      <stop offset="100%" stop-color="#ef6d2b"/>
+    </linearGradient>
+    <linearGradient id="furDark" x1="0" x2="1">
+      <stop offset="0%" stop-color="#d95f1c"/>
+      <stop offset="100%" stop-color="#a33b12"/>
+    </linearGradient>
+    <linearGradient id="ear" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f9c86d"/>
+      <stop offset="100%" stop-color="#ff9e3d"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <style><![CDATA[
+      .shadow { animation: shadowPulse 0.7s ease-in-out infinite alternate; }
+      .fox { animation: bob 0.7s ease-in-out infinite alternate; transform-origin: 130px 120px; }
+      .tail { animation: tailWag 0.42s ease-in-out infinite alternate; transform-origin: 190px 110px; }
+      .leg-back { animation: legBack 0.35s ease-in-out infinite alternate; transform-origin: 95px 150px; }
+      .leg-front { animation: legFront 0.35s ease-in-out infinite alternate; transform-origin: 128px 150px; }
+      .ear-left { animation: earTilt 0.7s ease-in-out infinite alternate; transform-origin: 108px 55px; }
+      .ear-right { animation: earTilt 0.7s ease-in-out infinite alternate 0.1s; transform-origin: 138px 55px; }
+      @keyframes bob { 0% { transform: translateY(0px); } 100% { transform: translateY(-4px); } }
+      @keyframes shadowPulse { 0% { opacity: 0.35; transform: scaleX(0.96); } 100% { opacity: 0.55; transform: scaleX(1.08); } }
+      @keyframes tailWag { 0% { transform: rotate(-18deg); } 100% { transform: rotate(18deg); } }
+      @keyframes legBack { 0% { transform: rotate(18deg); } 100% { transform: rotate(-16deg); } }
+      @keyframes legFront { 0% { transform: rotate(-14deg); } 100% { transform: rotate(16deg); } }
+      @keyframes earTilt { 0% { transform: rotate(-7deg); } 100% { transform: rotate(7deg); } }
+    ]]></style>
+  </defs>
+
+  <ellipse class="shadow" cx="130" cy="175" rx="82" ry="18" fill="#7d4b35" opacity="0.28"/>
+
+  <g class="fox" filter="url(#shadow)">
+    <path class="tail" d="M185 105 C210 78, 228 82, 234 107 C220 113, 205 120, 189 118 Z" fill="url(#furDark)"/>
+
+    <g>
+      <path d="M94 90 L58 62 L72 108 Z" fill="url(#ear)" class="ear-left"/>
+      <path d="M152 90 L188 62 L174 108 Z" fill="url(#ear)" class="ear-right"/>
+      <path d="M76 78 C92 42, 156 42, 180 78 L171 110 C156 128, 104 128, 89 110 Z" fill="url(#fur)"/>
+      <path d="M92 107 L126 97 L164 106 L150 122 L110 122 Z" fill="#fff4e1"/>
+      <circle cx="113" cy="100" r="4" fill="#1d1b1c"/>
+      <circle cx="149" cy="100" r="4" fill="#1d1b1c"/>
+      <path d="M126 105 Q132 111 138 105" stroke="#1d1b1c" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M101 111 Q126 124 151 111" stroke="#8c3d18" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.75"/>
+    </g>
+
+    <path d="M84 112 L76 146 C70 164, 74 180, 93 182 L102 149 C104 131, 96 120, 84 112 Z" fill="url(#furDark)" class="leg-back"/>
+    <path d="M151 112 L160 146 C167 164, 171 180, 133 182 L126 149 C124 131, 138 120, 151 112 Z" fill="url(#furDark)" class="leg-front"/>
+    <path d="M80 125 L64 178 C58 190, 68 197, 79 194 L98 163 C101 148, 93 132, 80 125 Z" fill="#ee7d31" class="leg-back" opacity="0.8"/>
+    <path d="M154 125 L171 178 C177 190, 166 197, 155 194 L136 163 C133 148, 141 132, 154 125 Z" fill="#ee7d31" class="leg-front" opacity="0.8"/>
+
+    <path d="M98 120 C123 130, 146 130, 163 120 L179 146 C163 153, 138 157, 111 154 Z" fill="#f7a136"/>
+  </g>
+</svg>
