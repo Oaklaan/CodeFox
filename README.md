@@ -21,6 +21,12 @@ A tiny pixel fox that roams the Explorer sidebar of Visual Studio Code while you
 
 The **Fox** view opens automatically in the Explorer sidebar alongside your files when VS Code starts. Run **Fox: Show** from the Command Palette to focus it again.
 
+## Project documentation
+
+- [Architecture](./ARCHITECTURE.md): components, development workflow, CI, packaging, and release process.
+- [Contributing](./CONTRIBUTING.md): setup, implementation guidance, and pull request workflow.
+- [Future enhancements](./FUTURE_ENHANCEMENTS.md): candidate ideas, not a committed roadmap.
+
 ## Requirements
 
 - Visual Studio Code 1.85 or newer
